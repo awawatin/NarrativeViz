@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title> CS416: Narrative Visualization Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
+        <!-- Do not modify the next three lines. -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src='https://d3js.org/d3.v7.min.js'></script>
+        <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+        <!-- <script src="js/d3-annotation.min.js"></script> -->
+        <script src="https://d3js.org/topojson.v3.min.js"></script>  
+
+     </head>
+
+     <body onload="init()">
+        <header role = 'banner'>
+            <div>
+                <h1> Data Science Careers 2020 to 2023:   </h1>
+                <h1> Exploring Experienced-Based Pay Trends </h1>
+            </div>
+        </header>
+            
+        <p> The following line chart demonstrates the mean salary trends over the chosen period of time for data science careers around the world,
+            separated based on the employee's level of experience. The relative mean salary is unitless as it indicates a relative (starting point of 1.0) increase
+            or decrease in salaries; whereas, the absolue mean salary has unit of USD.
+            <br></br>
+            Let's take a closer look at which experience levels observed their highest and lowest times by the annotations provided for you. To change the view
+            from relative mean salary to absolute mean salary, you can follow the "Next" button. To change the view back to its original relative mean salary
+            axis, please click on the "Previous" button. 
+            <br></br>
+        </p>
+        <p style="font-weight: bold; font-style: italic;">
+
+            The interactive is as close to you as two consecutive "Next" button click, the chart awaits!
+        </p>
+
+        <p>
+            <p style="color:#0284c7; font-weight: bold; text-decoration: underline;">Navigation Information:</p>
+            <ul>
+                <li> The <b>Previous</b> button refers to re-starting from the start of this scene for all the next scenes.
+                        <img src="img/prev-button.png" alt="Previous button image" style="width:5%;height:1%;"></li>
+                <li> The <b>Home</b> button takes you to the start of the webpage, a background information and the 
+                    starting point of exploring the designed roadmap.  <img src="img/home-button.png" alt="Home button image" style="width:5%;height:1%;"></li>
+                <li> The <b>Next</b> button is designed to assist you in continuing the following scenes where you will receive more information related to 
+                    different experience levels in data-related positinos. 
+                    <img src="img/next-button.png" alt="Next button image" style="width:4%;height:1%;"></li>
+                </ul>
+        </p>
+        <div>
+            <!-- @ NAVIGATION ITEM LOCATION -->
+            <ul class='nav-items'>
+                <a href="page-2.html" class="button">&laquo; Previous</a>
+                <a href="index.html" class="button">Home</a>
+                <!-- <a href="page-3.html" class="button">Next &raquo;</a> -->
+                <button class="button" id="exp2">Next &raquo;</button>
+
+            </ul>
+        <!-- =========================== -->
+        </div>
+
+        
+        <div class="canvas">
+            <h3> Mean Salary Trends Throughout the Years</h3>
+            
+            <svg width=300 height=300 style="display: block; margin: auto"> </svg>
+            <!-- <script src="js/job_distribution/salary-all.js"></script> -->
+            <script src="js/job_distribution/salary-relative.js"></script>
+        </div>  
+    </body>
+</html>

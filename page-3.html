@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title> CS416: Narrative Visualization Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
+        <!-- Do not modify the next three lines. -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <script src="js/jquery.min.js"></script> -->
+        <script src='https://d3js.org/d3.v7.min.js'></script>
+        <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+        <!-- <script src="js/d3-annotation.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+     </head>
+ 
+
+     <body onload="init()">
+        <header role = 'banner'>
+            <div>
+                <h1> Data Science Careers 2020 to 2023:   </h1>
+                <h1> Exploring Experienced-Based Pay Trends </h1>
+            </div>
+
+            </header>
+            <p> Despite as one might think, data science positions also got impacted with COVID-19 and there are distinctive parameters that can be explored
+                to observe the impact of each on both relative and absolute mean salaries across the world. The following interactive chart is yours to be 
+                played around with and make your own inferences. 
+
+                <br></br>
+
+                Help yourself out with the three containers given on top of the chart to use the radio buttons in selecting parameters and see how the chart
+                changes.
+            </p>
+
+            <p style="font-weight: bold; font-style: italic;">
+                Note that you can access further information regarding mean salaries per experience level in data science careers as you hover
+                over the chart datapoints throughout the years. 
+            </p>
+            <p>
+                <p style="color:#0284c7; font-weight: bold; text-decoration: underline;">Navigation Information:</p>
+                <ul>
+                    <li> The <b>Previous</b> button refers to getting back to the start of the non-interactive story-telling.
+                            <img src="img/prev-button.png" alt="Previous button image" style="width:5%;height:1%;"></li>
+                    <li> The <b>Home</b> button takes you to the start of the webpage, a background information and the 
+                        starting point of exploring the designed roadmap.  <img src="img/home-button.png" alt="Home button image" style="width:5%;height:1%;"></li>
+                    <li> The <b>Next</b> button is designed to assist you in continuing the following scenes where you will receive more information related to 
+                        different experience levels in data-related positinos. 
+                        <img src="img/next-button.png" alt="Next button image" style="width:4%;height:1%;"></li>
+                </ul>
+            </p>
+            <div>
+                <!-- @ NAVIGATION ITEM LOCATION -->
+                 <ul class='nav-items'>
+                     <a href="page-2.html" class="button">&laquo; Previous</a>
+                     <a href="index.html" class="button">Home</a>
+                    </ul>
+             </div>
+
+            <div class="canvas">
+                <h3> Mean Salary Trends Throughout the Years (Interactive)</h3>
+
+            
+                <div class="container">
+                    <h4> Company Size Selection </h4>
+                    <input type="radio" name = "comp" class = "small" value="1" onclick="init()">
+                    <label for="small"> Small-Sized Companies </label><br>
+                    <input type="radio" class = "mid" name = "comp" value="1" onclick="init()">
+                    <label for="mid"> Mid-Sized Companies</label><br>
+                    <input type="radio" class = "large" name = "comp" value="1" onclick="init()">
+                    <label for="large"> Large-Sized Companies </label><br>
+                    <input type="radio" checked="checked"  class = "all" name = "comp" value="1" onclick="init()">
+                    <label for="all"> All-sized Companies </label><br>
+                </div>
+
+                <div class="container">
+                    <h4> Remote Time Selection </h4>
+                    <input type="radio" name = "emp" class = "zero" value="1" onclick="init()">
+                    <label for="zero"> 0% </label><br>
+                    <input type="radio" class = "fifty" name = "emp" value="1" onclick="init()">
+                    <label for="fifty"> 50%</label><br>
+                    <input type="radio" class = "hundred" name = "emp" value="1" onclick="init()">
+                    <label for="hundred"> 100% </label><br>
+                    <input type="radio" checked="checked"  class = "all_remo" name = "emp" value="1" onclick="init()">
+                    <label for="all_remo"> All-type Remote </label><br>
+                </div>
+
+                <div class="container">
+                    <h4> Mean Salary Unit Selection </h4>
+                    <input type="radio" checked="checked" name="unit" class = "abs" value="1" onclick="init()">
+                    <label for="rel"> Absolute </label><br>
+                    <input type="radio" name = "unit" class = "rel" value="1" onclick="init()">
+                    <label for="rel"> Relative </label><br>
+                    <label for="all_count" style="color: #e0f2fe;"> None </label><br>
+                    <label for="all_count" style="color: #e0f2fe;"> None </label><br>
+                </div>
+                
+
+                <div id="canvas_id">
+                <svg width=300 height=300 style="display: block; margin: auto"> </svg>
+                </div>
+                <!-- <script src="js/job_distribution/job-dist-highest.js"></script> -->
+                <script src="js/job_distribution/job-dist-highest.js"></script>
+            </div>
+        </body>
+</html>
