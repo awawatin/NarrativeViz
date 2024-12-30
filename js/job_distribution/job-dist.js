@@ -5,7 +5,7 @@ var width = 500;
 var margin = 100;
 
 // =============================================== DATA SELECTION =============================================
-const data = await d3.csv("https://raw.githubusercontent.com/alaratin/cs416-atin4.github.io/main/data/ds_salaries.csv");
+const data = await d3.csv("https://raw.githubusercontent.com/awawatin/NarrativeViz/refs/heads/main/data/ds_salaries.csv");
 // ============================================================================================================
 
 // =============================================== ANNOTATIONS ================================================
